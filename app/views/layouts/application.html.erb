@@ -2,14 +2,24 @@
 <html>
   <head>
     <title>Taskapp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/"> タスクを管理しましょう</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/tweets/new">編集する</a>
+        </div>
+      </div>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <p>
+        taskapp
+      </p>
+    </footer>
   </body>
 </html>
