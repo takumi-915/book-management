@@ -1,12 +1,15 @@
   <% @tweets.each do |tweet| %>
 
     <div class="sidebar">
+      ログインしているuser一覧
      <%= tweet.name %>
     </div>
 
     <div class="task">
       <span class="name">
-        <%= tweet.name %>
+        <%# <% if user_signed_in? %> %>
+          <%# <%= current_user.nickname %>  %>
+        <%# <% end %> %>
       </span>
       <div class="content">
       ここにjavascript埋め込む
