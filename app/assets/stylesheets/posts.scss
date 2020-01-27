@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #f6f6f6;
+  height: 100%;
+  width: 100%;
+  .header{
+    height: 40%;
+    width: 100%;
+    padding: 0 150px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Dancing Script', cursive;
+    background-image: url(https://cdn.pixabay.com/photo/2016/08/24/16/20/books-1617327_1280.jpg);
+    &__title{
+      font-size: 40px;
+      line-height: 56px;
+      &--text{
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    &__right{
+      &--btn{
+        text-decoration: none;
+        line-height: 56px;
+        color: #fff;
+        margin-left:15px;
+        font-size: 30px;
+      }
+    }
+  }
+  } 
+  .contents{
+    display: flex;
+    // padding-top: 300px;
+    // margin: 0 50px;
+    height: calc(100% - 40%);
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+  }
+  .sidebar{
+    height: 100%;
+    width: 15%;
+    color: white;
+    background-color: #CD5C5C;
+    position: relative;
+    font-family: 'Kosugi Maru', sans-serif;
+  }
+  .content{
+    background-color: #fff;
+    // height: calc(100% - 40%);
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #f6f6f6;
+    // display: flex;
+    font-family: 'Martel', serif;
+    &__left{
+      padding-right: 20px;
+      &--image{
+        width: 200px;
+        height: auto;
+        border: solid 1px;
+      }
+    }
+    &__middle{
+      width: calc(100%-100px);
+      &__top{
+        font-size: 20px;
+        font-weight: bold;
+        &--title{
+          text-decoration: none;
+          color: #000000;
+        }
+      }
+      &__bottom{
+        font-size: 15px;
+        color: #999;
+        display: flex;
+        &--userName{
+          &--btn{
+            text-decoration: none;
+            color: #999;
+          }
+        }
+        &--date{
+          color: #000000;
+        }
+      }
+    }
+  }  
+  .postManage{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    &__edit{
+      display: block;
+      border-radius: 5px;
+      color: #ffffff;
+      background-color:#CD5C5C;
+      padding: 0 10px;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    &__delete{
+      display: block;
+      border-radius: 5px;
+      color: #ffffff;
+      background-color:#CD5C5C;
+      padding: 0 10px;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  }
+  .post{
+    display: flex;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px #CD5C5C;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    text-align: center;
+    &__Image{
+      padding-top: 30px;
+      width: 200px;
+      height: auto;
+    }
+    &__Title{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      color: black;/*文字色*/
+      background: #FFF;
+      border: solid 3px #CD5C5C;/*線*/
+      border-radius: 10px;/*角の丸み*/
+      text-align: center;
+    }
+    &__Review{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      color: black;/*文字色*/
+      background: #FFF;
+      border: solid 3px #CD5C5C;/*線*/
+      border-radius: 10px;/*角の丸み*/
+      text-align: center;
+    }
+    &__Text{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      color: black;/*文字色*/
+      background: #FFF;
+      border: solid 3px #CD5C5C;/*線*/
+      border-radius: 10px;/*角の丸み*/
+      text-align: center;
+    }
+  // 　__title{
+  //     font-size: 30px;
+  //     font-weight: bold;
+  //     padding-top: 30px;
+  //     text-align: center;
+  //     width: 20%;
+  //     font-family: 'Noto Serif JP', serif;
+  //   }
+  }
+  .form{
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+    &__title{
+      display: block;
+      width: 100%;
+      height: 50px;
+    }
+    &__review{
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin-top: 15px;
+    }
+    &__content{
+      display: block;
+      width: 100%;
+      height: 30%;
+      margin-top: 15px;
+    }
+    &__image{
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin-top: 15px;
+    }
+    &__btn btn-success{
+      display: block;
+      width: 30%;
+      margin: 15px auto 0;
+    }
+  }
+  .user{
+    padding: 15px 30px;
+  }
+  .search-form{
+    padding-top: 10px;
+  }
+  .search-btn{
+    margin-top: 10px;
+  }
+  .sidebar-bottom{
+    position: absolute;
+    // bottom: 0;
+    font-size: 20px;
+    top: 70%
+  }
+  .content-title{
+    font-size: 30px;
+    padding-top:30px;
+    margin-left: 20px;
+  }
+  .show{
+    margin: 0 auto;
+  }

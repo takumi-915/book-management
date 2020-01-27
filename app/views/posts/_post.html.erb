@@ -1,0 +1,22 @@
+<div class="content">
+  <div class="content__left">
+    <div class="content__left--image">
+      <img src=<%= post.image %> >
+    </div>
+  </div>
+  <div class="content__middle">
+    <div class="content__middle__top">
+      <%= link_to post.title, post_path(post.id), class: "content__middle__top--title" %>
+    </div>
+    <div class="content__middle__bottom">
+      <div class="content__middle__bottom--date">
+        <%= post.created_at.to_s(:datetime_jp) %>
+      </div>
+    </div>
+  </div>
+  <div class="content__right">
+    <div class="content__right__review">
+      ⭐️<%= post.review %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="content-title">
+  投稿の編集✏️
+</div>
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :タイトルを記入してください, class: :form__title %>
+  <%= form.text_field :review, placeholder: :評価してください, class: :form__review %>
+  <%= form.text_area :content, placeholder: :感想を記入してください, class: :form__content %>
+  <%= form.text_field :image, placeholder: :画像URLを記入してください, class: :form__image %>
+  <%= form.submit '再投稿する', class: :"btn btn-success mt-4" %>
+<% end %>
