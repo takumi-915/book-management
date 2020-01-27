@@ -1,0 +1,22 @@
+<div class="show">
+  <div class="postManage">
+    <%= link_to "編集", edit_post_path(@post.id), class: "postManage__edit" %>
+    <%= link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete" %>
+  </div>
+  <div class="post">
+    <div class="post__Image">
+      <img src=<%= @post.image %> >
+    </div>
+    <div class= post__content>
+      <div class="post__Title">
+        タイトル：<%= @post.title %>
+      </div>
+      <div class="post__Review">
+        評価：⭐️<%= @post.review %>
+      </div>
+      <div class="post__Text">
+        感想：<%= simple_format @post.content %>
+      </div>
+    </div>
+  </div>
+</div>
