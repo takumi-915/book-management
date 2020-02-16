@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   # before_action :move_to_index, except: [:index, :show, :search]
+  # before_action :set_variables
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -9,7 +10,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    begin
+      @post.save!
+    rescue ActiveRecord::RecordInvalid => e
+      puts e
+    end
     redirect_to root_path
   end
 
@@ -37,10 +43,9 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-
   private
   def post_params
-    params.require(:post).permit(:title, :review, :content, :image)
+    params.require(:post).permit(:title, :review, :content, :image).merge(user_id: current_user.id)
   end
 
 end
