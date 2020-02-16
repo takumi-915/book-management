@@ -78,3 +78,4 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'kaminari'
 gem "font-awesome-rails"
+gem 'rename'
