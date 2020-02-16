@@ -17,6 +17,12 @@
       <div class="post__Text">
         感想：<%= simple_format @post.content %>
       </div>
+      <%# <div class="post__like"> %>
+        <%# <%= link_to "編集", edit_post_path(@post.id), class: "btn" %>
+          <%# = icon('fa', 'star', class: 'likeBtn') %>
+            <%# お気に入り 0 %> 
+      <%= render 'likes/like', post: @post %>
+      <%# </div> %>
     </div>
   </div>
 </div>
