@@ -8,13 +8,13 @@
       <img src=<%= @post.image %> >
     </div>
     <div class= post__content>
-      <div class="post__Title">
+      <div class="post__content__Title">
         タイトル：<%= @post.title %>
       </div>
-      <div class="post__Review">
+      <div class="post__content__Review">
         評価：⭐️<%= @post.review %>
       </div>
-      <div class="post__Text">
+      <div class="post__content__Text">
         感想：<%= simple_format @post.content %>
       </div>
       <%# <div class="post__like"> %>
