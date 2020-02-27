@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :posts, except: :index
     collection do
       get 'search'
+      get 'menu'
     end
   end
   post   '/like/:post_id' => 'likes#like',   as: 'like'

@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   # before_action :move_to_index, except: [:index, :show, :search]
   # before_action :set_variables
   def index
-    @posts = Post.all.order("created_at DESC")
     @posts = Post.includes(:user)
   end
 
@@ -17,7 +16,7 @@ class PostsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => e
       puts e
     end
-    redirect_to root_path
+    redirect_to menu_posts_path
   end
 
   def show
@@ -42,6 +41,10 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     redirect_to root_path
+  end
+
+  def menu
+    @posts = Post.all.order("created_at DESC")
   end
 
   private
