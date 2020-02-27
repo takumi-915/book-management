@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :show, :search]
   # before_action :set_variables
   def index
     @posts = Post.all.order("created_at DESC")
@@ -46,6 +46,10 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :review, :content, :image).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end

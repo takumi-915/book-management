@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Book Managiment</title>
+    <title>Book Management</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -21,16 +21,24 @@
       </div>
       <div class="header__right">
         <% if user_signed_in? %>
-          <%= link_to "New Post", new_post_path, class: "header__right--btn" %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+          <%= link_to "トップ", root_path, class: "header__right--btn" %>
+          <%= link_to "すべての投稿", root_path, class: "header__right--btn" %>
+          <%= link_to "@post.name", root_path, class: "header__right--btn" %>
+          <%= link_to "投稿する", new_post_path, class: "header__right--btn" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
         <% else %>
-          <%= link_to "Login", new_user_session_path, class: "header__right--btn" %>
-          <%= link_to "Signup", new_user_registration_path, class: "header__right--btn" %>
+          <%= link_to "トップ", root_path, class: "header__right--btn" %>
+          <%= link_to "すべての投稿", new_post_path, class: "header__right--btn" %>
+          <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+          <%= link_to "会員登録", new_user_registration_path, class: "header__right--btn" %>
         <% end %>
       </div>
     </header>
     <div class="contents">
       <%= yield %>
+    </div>
+    <div class="footer">
+      @2020 Book Management
     </div>
   </body>
 </html>
