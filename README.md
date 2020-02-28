@@ -28,4 +28,4 @@ https://radiant-temple-07259.herokuapp.com/
 |ユーザー管理|devise|
 
 
-### まだ実装していない機能あります。
+まだ実装していない機能あります。
