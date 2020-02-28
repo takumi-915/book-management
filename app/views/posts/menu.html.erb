@@ -1,7 +1,7 @@
 <div class="menu">
   <div class="menu-bar">
     <div class="menu-bar__left">
-      あなたが現在読んだ本は<strong><%= @posts.ids.length %></strong>冊です。
+      現在の投稿数は<strong><%= @posts.ids.length %></strong>件です。
     </div>
     <div class="search">
       <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
