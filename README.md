@@ -1,24 +1,30 @@
-# README
+# Book Manegement
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+自分が読んだ本の「画像・感想・評価」を記録し、他のユーザーともシェアできるアプリ
 
-Things you may want to cover:
+## リンク
 
-* Ruby version
+https://radiant-temple-07259.herokuapp.com/
 
-* System dependencies
+## 実装機能
 
-* Configuration
+- ユーザー管理機能(ユーザー登録/ログイン/ログアウト)
+- 投稿機能/編集機能
+- 投稿一覧閲覧機能
+- キーワード検索機能
+- 非同期通信(jQuery)いいね機能
+- 投稿詳細機能
 
-* Database creation
+## 使用している技術一覧
 
-* Database initialization
+|種別|名称|
+|------|----|
+|開発言語|Ruby|
+|マークアップ|HTML|
+|フロントエンド|JavaScript(jQuery)|
+|DB|MySQL|
+|本番環境|heroku|
+|ユーザー管理|devise|
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### まだ実装していない機能あります。
