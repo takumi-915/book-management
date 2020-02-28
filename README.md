@@ -7,6 +7,11 @@
 
 https://radiant-temple-07259.herokuapp.com/
 
+## テストアカウント
+
+- メールアドレス：sample@mail.com
+- パスワード：123456
+
 ## 実装機能
 
 - ユーザー管理機能(ユーザー登録/ログイン/ログアウト)
