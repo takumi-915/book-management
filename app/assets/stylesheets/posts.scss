@@ -11,6 +11,12 @@ body{
   background-color: #f6f6f6;
   height: 100%;
   width: 100%;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+  }
   .header{
     height: 50px;
     width: 100%;
@@ -100,12 +106,12 @@ body{
   .main-content{
     .content-image{
       background-color: #fff;
-      width: 290px;
       border-bottom: 1px solid #f6f6f6;
       font-family: 'Martel', serif;
       width: 200px;
       height: auto;
       border: solid 1px;
+      border-radius: 10px;
     }
   } 
   .postManage{
@@ -121,6 +127,7 @@ body{
       padding: 0 10px;
       text-decoration: none;
       margin-right: 10px;
+      
     }
     &__delete{
       display: block;
@@ -182,7 +189,6 @@ body{
     }
   }
   .menu{
-    height: calc(100vh - 90px);
     .menu-bar{
       display: flex;
       background-color: #999;
@@ -238,6 +244,9 @@ body{
     z-index: 1;
     text-align: center;
     line-height: 40px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
   }
   .form{
     width: 65%;
