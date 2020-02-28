@@ -1,7 +1,7 @@
 # Book Manegement
 
 自分が読んだ本の「画像・感想・評価」を記録し、他のユーザーともシェアできるアプリ
-(https://user-images.githubusercontent.com/59188083/75506838-9695a980-5a22-11ea-953e-4190464b4404.jpg)
+![トップページ](https://user-images.githubusercontent.com/59188083/75506838-9695a980-5a22-11ea-953e-4190464b4404.jpg)
 
 ## リンク
 
