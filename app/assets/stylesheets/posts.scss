@@ -104,14 +104,29 @@ body{
     }
   }
   .main-content{
-    .content-image{
+    margin: 0 40px 20px 40px;
+    .content-image-box{
       background-color: #fff;
       border-bottom: 1px solid #f6f6f6;
       font-family: 'Martel', serif;
       width: 200px;
-      height: auto;
+      height: 280px;
       border: solid 1px;
       border-radius: 10px;
+      position: relative;
+      .content-image{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        border-radius: 10px;
+      }
     }
   } 
   .postManage{
@@ -189,6 +204,9 @@ body{
     }
   }
   .menu{
+    height: calc(100vh - 80px);
+    overflow: scroll;
+    background-color: #f5f5f5;
     .menu-bar{
       display: flex;
       background-color: #999;
@@ -230,7 +248,6 @@ body{
       font-size: 40px;
     }
     .menu-post{
-      overflow: scroll;
       display: flex;
       margin: 0 auto;
       max-width: 900px;
