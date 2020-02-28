@@ -10,6 +10,7 @@
       <% end %>
     </div>
   </div>
+  <h3>ユーザー投稿一覧</h3>
   <div class="menu-post">
     <% @posts.each do |post| %>
 　  <%= render partial: "post", locals: { post: post } %>

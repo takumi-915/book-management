@@ -97,27 +97,8 @@ body{
       }
     }
   }
-  
-  // .sidebar{
-  //   height: 100%;
-  //   margin-top: 50px;
-  //   width: 15%;
-  //   color: white;
-  //   background-color: #CD5C5C;
-  //   position: relative;
-  //   font-family: 'Kosugi Maru', sans-serif;
-  //   position: fixed;
-  //   .search-form{
-  //     .search-input{
-  //       width: 100%;
-  //     }
-  //   }
-  //   .contents-row{
-  //     height: 100%;
-  //   }
-  // }
   .main-content{
-    padding-left: 14%;
+    margin: 0 20px;
     .content{
       background-color: #fff;
       width: 290px;
@@ -269,6 +250,18 @@ body{
           border: 1px solid #333333;
         }
       }
+    }
+    h3{
+      text-align: center;
+      margin: 40px 0;
+      font-weight: bold;
+      font-size: 40px;
+    }
+    .menu-post{
+      overflow: scroll;
+      display: flex;
+      margin: 0 auto;
+      max-width: 900px;
     }
   }
   .footer{
