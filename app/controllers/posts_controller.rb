@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  # before_action :move_to_index, except: [:index, :show, :search]
-  # before_action :set_variables
+  before_action :move_to_index, except: [:index, :show, :search, :menu]
+  
   def index
     @posts = Post.includes(:user)
   end
