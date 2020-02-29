@@ -1,7 +1,9 @@
 <div class="show">
   <div class="postManage">
-    <%= link_to "編集", edit_post_path(@post.id), class: "btn btn-outline-secondary" %>
-    <%= link_to "削除", post_path(@post.id), method: :delete, class: "btn btn-outline-secondary" %>
+    <% if user_signed_in? %>
+      <%= link_to "編集", edit_post_path(@post.id), class: "btn btn-outline-secondary" %>
+      <%= link_to "削除", post_path(@post.id), method: :delete, class: "btn btn-outline-secondary" %>
+    <% end %>
   </div>
   <div class="post">
     <div class="post__User">
