@@ -111,7 +111,6 @@ body{
       font-family: 'Martel', serif;
       width: 200px;
       height: 280px;
-      border: solid 1px;
       border-radius: 10px;
       position: relative;
       .content-image{
@@ -226,7 +225,7 @@ body{
     }
   }
   .post-redirect{
-    margin: 100px;
+    margin: 35px 100px 0 100px;
     text-align: center;
     text-decoration: none;
     &__btn{

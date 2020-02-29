@@ -1,0 +1,19 @@
+<div class="menu">
+  <div class="menu-bar">
+    <div class="menu-bar__left">
+      あなたは<strong><%= @posts.ids.length %></strong>冊の本を読んでいます。
+    </div>
+    <div class="search">
+      <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "キーワードで投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "btn btn-light" %>
+      <% end %>
+    </div>
+  </div>
+  <h3><%= @user.nickname %>さんの投稿</h3>
+  <div class="menu-post">
+    <% @posts.each do |post| %>
+　  <%= render partial: "/posts/post", locals: { post: post } %>
+    <% end %>
+  </div>
+</div>

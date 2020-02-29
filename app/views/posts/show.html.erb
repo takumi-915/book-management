@@ -5,7 +5,7 @@
   </div>
   <div class="post">
     <div class="post__User">
-      投稿者：<%= link_to @post.user.nickname, root_path, class: "post__User__name" %>
+      投稿者：<%= link_to @post.user.nickname, user_path(@post.user), class: "post__User__name" %>
         <div class="post__User__name__date">
           <%= @post.created_at.to_s(:datetime_jp) %>
         </div>
@@ -27,6 +27,9 @@
         <%= render 'likes/like', post: @post %>
       </div>
     </div>
+  </div>
+  <div class="post-redirect">
+    <%= link_to "投稿一覧へ戻る", menu_posts_path, class: "btn btn-outline-dark" %>
   </div>
   <div class="post-redirect">
     <%= link_to "ホームへ戻る", root_path, class: "btn btn-outline-dark" %>
