@@ -5,7 +5,7 @@
   </div>
   <div class="post">
     <div class="post__User">
-      投稿者：<%= link_to current_user.nickname, root_path, class: "post__User__name" %>
+      投稿者：<%= link_to @post.user.nickname, root_path, class: "post__User__name" %>
         <div class="post__User__name__date">
           <%= @post.created_at.to_s(:datetime_jp) %>
         </div>
