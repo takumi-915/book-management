@@ -2,18 +2,18 @@
   <% if user_signed_in? %>
     <% if current_user.likes.find_by(post_id: @post.id) %>
       <%= link_to unlike_path(post.id), method: :delete, remote: true do %>
-      <div class = "iine__button">❤️<%= @post.likes.count %> いいね</div>
+      <div class = "iine__button">❤️<%= @post.likes.count %> イイね！</div>
       <% end %>
     <% else %>
       <%= link_to like_path(@post.id), method: :post, remote: true do %>
-      <div class = "iine__button">♡️<%= @post.likes.count %> いいね</div>
+      <div class = "iine__button">♡️<%= @post.likes.count %> イイね！</div>
       <% end %>
     <% end %>
   <% else %>
     <% if @post.likes.length > 0 %>
-      <div class = "iine__button">❤️<%= @post.likes.count %> いいね</div>
+      <div class = "iine__button">❤️<%= @post.likes.count %> イイね！</div>
     <% else %>
-      <div class = "iine__button">♡️<%= @post.likes.count %> いいね</div>
+      <div class = "iine__button">♡️<%= @post.likes.count %> イイね！</div>
     <% end %>
   <% end %>
 </div>

@@ -1,28 +1,34 @@
 <div class="show">
   <div class="postManage">
-    <%= link_to "編集", edit_post_path(@post.id), class: "postManage__edit" %>
-    <%= link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete" %>
+    <%= link_to "編集", edit_post_path(@post.id), class: "btn btn-outline-secondary" %>
+    <%= link_to "削除", post_path(@post.id), method: :delete, class: "btn btn-outline-secondary" %>
   </div>
   <div class="post">
-    <div class="post__Image">
-      <img src=<%= @post.image %> >
+    <div class="post__User">
+      投稿者：<%= link_to current_user.nickname, root_path, class: "post__User__name" %>
+        <div class="post__User__name__date">
+          <%= @post.created_at.to_s(:datetime_jp) %>
+        </div>
     </div>
-    <div class= post__content>
-      <div class="post__content__Title">
-        タイトル：<%= @post.title %>
+    <div class="post-box">
+      <div class="post-box__Image">
+        <img src=<%= @post.image %> >
       </div>
-      <div class="post__content__Review">
-        評価：⭐️<%= @post.review %>
+      <div class= post-box__content>
+        <div class="post-box__content__Title">
+          <%= @post.title %>
+        </div>
+        <div class="post-box__content__Review">
+          評価：⭐️<%= @post.review %>
+        </div>
+        <div class="post-box__content__Text">
+          <%= simple_format @post.content %>
+        </div>
+        <%= render 'likes/like', post: @post %>
       </div>
-      <div class="post__content__Text">
-        感想：<%= simple_format @post.content %>
-      </div>
-      <%# <div class="post__like"> %>
-        <%# <%= link_to "編集", edit_post_path(@post.id), class: "btn" %>
-          <%# = icon('fa', 'star', class: 'likeBtn') %>
-            <%# お気に入り 0 %> 
-      <%= render 'likes/like', post: @post %>
-      <%# </div> %>
     </div>
+  </div>
+  <div class="post-redirect">
+    <%= link_to "ホームへ戻る", root_path, class: "btn btn-outline-dark" %>
   </div>
 </div>

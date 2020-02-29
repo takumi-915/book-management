@@ -106,8 +106,8 @@ body{
   .main-content{
     margin: 0 40px 20px 40px;
     .content-image-box{
-      background-color: #fff;
-      border-bottom: 1px solid #f6f6f6;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid hsl(0, 0%, 96%);
       font-family: 'Martel', serif;
       width: 200px;
       height: 280px;
@@ -126,81 +126,110 @@ body{
         max-height: 100%;
         margin: auto;
         border-radius: 10px;
+        object-fit: cover;
       }
     }
   } 
+  .show{
+    background-color: #f4f4f4;
+    height: calc(100vh - 80px);
+    overflow: scroll;
+  }
   .postManage{
     display: flex;
     justify-content: center;
-    padding-top: 20px;
-    margin: 0 auto;
-    &__edit{
-      display: block;
-      border-radius: 5px;
-      color: #ffffff;
-      background-color:#CD5C5C;
-      padding: 0 10px;
-      text-decoration: none;
-      margin-right: 10px;
-      
-    }
-    &__delete{
-      display: block;
-      border-radius: 5px;
-      color: #ffffff;
-      background-color:#CD5C5C;
-      padding: 0 10px;
-      text-decoration: none;
-      margin-left: 10px;
+    padding: 20px;
+    .btn-outline-secondary{
+      width: 100px;
+      color: black;
+      margin: 0 10px;
     }
   }
   .post{
-    display: flex;
-    padding: 0.5em 1em;
-    margin: 1em 0;
+    width: 600px;
+    margin: 0 auto;
     font-weight: bold;
     color: black;/*文字色*/
     background: #FFF;
-    border: solid 3px #CD5C5C;/*線*/
+    border: solid 1px #999;/*線*/
     border-radius: 10px;/*角の丸み*/
     text-align: center;
-    &__Image{
-      padding-top: 30px;
-      width: 200px;
-      height: auto;
+    &__User{
+      margin-top: 10px;
+      text-align: left;
+      padding-left: 5px;
+      &__name{
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+        &__date{
+          font-size: 13px;
+        }
+      }
     }
-    &__content{
-      margin: 0 15px;
-      &__Title{
-        padding: 0.5em 1em;
-        margin: 2em 0;
-        font-weight: bold;
-        color: black;/*文字色*/
-        background: #FFF;
-        border: solid 3px #CD5C5C;/*線*/
-        border-radius: 10px;/*角の丸み*/
-        text-align: center;
+    .post-box{
+      display: flex;
+      &__Image{
+        // padding: 10px 0 10px 20px;
+        width: 200px;
+        height: auto;
+        margin: 10px 0 30px 50px;
+        border: solid 1px black;/*線*/
+        // border-radius: 10px;/*角の丸み*/
+        
       }
-      &__Review{
-        padding: 0.5em 1em;
-        margin: 2em 0;
-        font-weight: bold;
-        color: black;/*文字色*/
-        background: #FFF;
-        border: solid 3px #CD5C5C;/*線*/
-        border-radius: 10px;/*角の丸み*/
-        text-align: center;
+      &__content{
+        margin: 10px 15px 15px 100px;
+        text-align: left;
+        width: 300px;
+        &__Title{
+          font-weight: bold;
+          color: black;/*文字色*/
+          background: #FFF;
+          // border: solid 3px #CD5C5C;/*線*/
+          // border-radius: 10px;/*角の丸み*/
+          text-align: center;
+          // text-decoration: underline;
+          font-size: 23px;
+          font-weight: bold;
+          width: auto;
+          text-align: left;
+        }
+        &__Review{
+          // padding: 0.5em 1em;
+          margin: 2em 0;
+          font-weight: bold;
+          color: black;/*文字色*/
+          background: #FFF;
+          // border: solid 3px #CD5C5C;/*線*/
+          // border-radius: 10px;/*角の丸み*/
+          text-align: center;
+          text-decoration: underline;
+          font-size: 17px;
+          width: auto;
+          text-align: left;
+        }
+        &__Text{
+          // padding: 0.5em 1em;
+          margin: 2em 0;
+          font-weight: bold;
+          color: black;/*文字色*/
+          background: #FFF;
+          // border: solid 3px #CD5C5C;/*線*/
+          // border-radius: 10px;/*角の丸み*/
+          text-align: center;
+          // text-decoration: underline;
+          width: auto;
+          text-align: left;
+        }
       }
-      &__Text{
-        padding: 0.5em 1em;
-        margin: 2em 0;
-        font-weight: bold;
-        color: black;/*文字色*/
-        background: #FFF;
-        border: solid 3px #CD5C5C;/*線*/
-        border-radius: 10px;/*角の丸み*/
-        text-align: center;
-      }
+    }
+  }
+  .post-redirect{
+    margin: 100px;
+    text-align: center;
+    text-decoration: none;
+    &__btn{
     }
   }
   .menu{
