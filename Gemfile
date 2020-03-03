@@ -81,3 +81,4 @@ gem 'kaminari'
 gem "font-awesome-rails"
 gem 'rename'
 gem 'carrierwave'
+gem 'fog-aws'
