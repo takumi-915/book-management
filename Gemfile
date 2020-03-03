@@ -43,6 +43,8 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
