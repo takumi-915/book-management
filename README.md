@@ -36,3 +36,5 @@ JavaScriptを用いてフロント実装に注力していく予定です。
 |DB|MySQL|
 |本番環境|heroku|
 |ユーザー管理|devise|
+|画像アップロード|carrierwave|
+|画像保存|AWS S3|
