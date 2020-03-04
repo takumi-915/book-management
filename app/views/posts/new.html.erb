@@ -14,10 +14,20 @@
     </li>
     </ul>
     <%= form.text_area :content, placeholder: :感想を記入してください, class: :form__content %>
-    <div class="Image">
-      画像を選択してください
-    </div>
-    <%= form.file_field :image, class: :form__image %>
+ 
+    <%= form.label :image, "クリックして画像を選択してください", class: :Image %>
+      <div id="img_field" onClick="$('#file').click()" >
+
+        <% if @post.image.url.present? %>
+          <%= image_tag(@post.image.url) %>
+        <% else %>
+          <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+        <% end %>
+ 
+      </div>
+    <%= form.file_field :image, class: :form__image, style: "display:none;", id: "file" %>
+    <div class="flex">
     <%= form.submit '投稿する', class: :"btn btn-success mt-4" %>
+    </div>
   <% end %>
 </div>

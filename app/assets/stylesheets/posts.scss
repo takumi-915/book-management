@@ -336,6 +336,35 @@ body{
     .Image{
       margin-top: 20px;
       font-size: 17px;
+      position: relative;
+      .preview{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      &__box{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        border-radius: 10px;
+        object-fit: cover;
+      }
     }
     &__image{
       display: block;
@@ -343,7 +372,7 @@ body{
       height: 50px;
       margin-top: 15px;
     }
-    .btn{
+    .btn-light{
       display: block;
       width: 30%;
       margin: 15px auto 0;
@@ -421,5 +450,72 @@ body{
       flex-wrap: wrap;
       background-color: #f5f5f5;
     }
+  }
+  #img_field {
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 5px 8px;
+    border: solid 1px rgb(85, 79, 68);
+    color: #666;
+    position: relative;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+  }
+  #img_field i {
+    font-size: 100px;
+    color: #aaa;
+    line-height: 250px;
+    transition: 0.3s ease-out;
+  }
+  #img_field i.add {
+    display: none;
+    font-size: 50px;
+    position: absolute;
+    top: -90px;
+    right: 15px;
+  }
+  #img_field:hover {
+    background-color: rgb(151, 147, 140);
+    transition: 0.3s ease-out;
+    opacity: 0.9;
+  }
+  #img_field:hover i {
+    transition: 0.3s ease-out;
+    display: block;
+    color: #fff;
+  }
+  .preview{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .flex{
+    display: flex;
+    margin-bottom: 24px;
+  }
+  .btn-success{
+    // margin: 24px 23%;
+    margin: 0 auto;
+    width: 500px;
+    height: 40px;
   }
 }

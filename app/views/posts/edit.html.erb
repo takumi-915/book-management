@@ -1,17 +1,34 @@
-<div class="content-title">
-  投稿の編集✏️
+<div class="new">  
+  <div class="content-title">
+    投稿の編集✏️
+  </div>
+  <%= form_with model: @post, class: :form, local: true do |form| %>
+    <%= form.text_field :title, placeholder: :タイトルを記入してください, class: :form__title %>
+    <ul class="form__review">
+    <li class="form__review__left">
+      評価：⭐️
+    </li>
+    <li class="form__review__right">
+      <%= form.select :review, [ ["評価を選択してください",0], ["5.0",5], ["4.5", 4.5], ["4.0", 4.0] ,["3.5", 3.5], ["3.0", 3.0], ["2.5", 2.5], ["2.0", 2.0], ["1.5", 1.5], ["1.0", 1.0], ["0.5", 0.5]  ] %>
+    </li>
+    </ul>
+    <%= form.text_area :content, placeholder: :感想を記入してください, class: :form__content %>
+    
+    <%= form.label :image, "画像をクリックすると変更できます", class: :Image %>
+      <div id="img_field" onClick="$('#file').click()" >
+
+        <% if @post.image.url.present? %>
+          <div class="Image__box">
+          <img src=<%= @post.image %> class="Image__box" >
+          </div>
+        <% else %>
+          <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+        <% end %>
+
+      </div>
+    <%= form.file_field :image, class: :form__image, style: "display:none;", id: "file" %>
+    <div class="flex">
+    <%= form.submit '再投稿する', class: :"btn btn-success mt-4" %>
+    </div>
+  <% end %>
 </div>
-<%= form_with model: @post, class: :form, local: true do |form| %>
-  <%= form.text_field :title, placeholder: :タイトルを記入してください, class: :form__title %>
-  <ul class="form__review">
-  <li class="form__review__left">
-    評価：⭐️
-  </li>
-  <li class="form__review__right">
-    <%= form.select :review, [ ["評価を選択してください",0], ["5.0",5], ["4.5", 4.5], ["4.0", 4.0] ,["3.5", 3.5], ["3.0", 3.0], ["2.5", 2.5], ["2.0", 2.0], ["1.5", 1.5], ["1.0", 1.0], ["0.5", 0.5]  ] %>
-  </li>
-  </ul>
-  <%= form.text_area :content, placeholder: :感想を記入してください, class: :form__content %>
-  <%= form.file_field :image, class: :form__image %>
-  <%= form.submit '再投稿する', class: :"btn btn-success mt-4" %>
-<% end %>
