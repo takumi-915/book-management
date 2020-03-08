@@ -15,5 +15,7 @@
     <% @posts.each do |post| %>
 　  <%= render partial: "post", locals: { post: post } %>
     <% end %>
+    
   </div>
+    <%= paginate(@posts) %>
 </div>
